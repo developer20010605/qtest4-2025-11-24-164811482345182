@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "canisters": {
+    "backend": {
+      "type": "motoko",
+      "main": "backend/main.mo",
+      "candid": "backend/main.did"
+    },
+    "frontend": {
+      "type": "assets",
+      "source": [
+        "frontend/dist"
+      ]
+    }
+  }
+}

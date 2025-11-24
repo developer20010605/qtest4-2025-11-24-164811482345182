@@ -1,0 +1,27 @@
+{
+  "name": "pay-to-watch-quiz-test",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "prebuild": "npm run prebuild --workspaces --if-present",
+    "build:workspaces": "npm run build --workspaces --if-present",
+    "build": "npm install --workspaces && npm run build:workspaces",
+    "start": "npm start --workspaces --if-present && dfx start --background",
+    "stop": "dfx stop",
+    "deploy": "dfx deploy",
+    "deploy:ic": "dfx deploy --network=ic",
+    "mops:install": "mops install",
+    "inspector": "mcp-inspector",
+    "app-store": "app-store-cli",
+    "auth": "auth-cli",
+    "pretest": "npm run prebuild --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}
